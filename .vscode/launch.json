@@ -15,7 +15,6 @@
                 {
                     "coreIndex": 0,
                     "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/hello",
-                    "svdFile": "${workspaceFolder}/nRF52840.svd"
                 }
             ],
             "consoleLogLevel": "Debug",
