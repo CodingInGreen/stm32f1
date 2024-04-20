@@ -13,5 +13,5 @@ fn main() -> ! {
     defmt::debug!("debug");
     defmt::error!("error");
 
-    my_app::exit()
+    stm32f1::exit()
 }

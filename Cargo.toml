@@ -21,7 +21,7 @@ defmt-rtt = "0.4"
 panic-probe = { version = "0.3", features = ["print-defmt"] }
 cortex-m-semihosting = "0.5.0"
 stm32f1xx-hal = { version = "0.10.0", features = ["stm32f103", "rt"] }
-stm32f1 = { version = "0.15.1", features = ["stm32f103"] }
+#stm32f1 = { version = "0.15.1", features = ["stm32f103"] }
 
 [dev-dependencies]
 defmt-test = "0.3"

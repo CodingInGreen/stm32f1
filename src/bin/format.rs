@@ -25,5 +25,5 @@ fn main() -> ! {
     let x = 42;
     defmt::println!("x={=u8}", x);
 
-    my_app::exit()
+    stm32f1::exit()
 }

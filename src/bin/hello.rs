@@ -8,5 +8,5 @@ use stm32f1 as _; // global logger + panicking-behavior + memory layout
 fn main() -> ! {
     defmt::println!("Hello, world!");
 
-    my_app::exit()
+    stm32f1::exit()
 }

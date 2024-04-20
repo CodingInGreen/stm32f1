@@ -6,7 +6,7 @@ use stm32f1 as _; // global logger + panicking-behavior + memory layout
 #[cortex_m_rt::entry]
 fn main() -> ! {
     ack(10, 10);
-    my_app::exit()
+    stm32f1::exit()
 }
 
 fn ack(m: u32, n: u32) -> u32 {
