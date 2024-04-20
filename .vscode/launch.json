@@ -4,17 +4,17 @@
         {
             "type": "probe-rs-debug",
             "request": "launch",
-            "name": "Debug nRF52840 with probe-rs",
+            "name": "Debug STM32F1 with probe-rs",
             "probe": "1209:4853:dc61cd078f743b33ef4014",
             "chip": "STM32F103C8Tx",
             "flashingConfig": {
                 "flashingEnabled": true,
-                "haltAfterReset": false,
+                "haltAfterReset": false
             },
             "coreConfigs": [
                 {
                     "coreIndex": 0,
-                    "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/hello",
+                    "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/hello"
                 }
             ],
             "consoleLogLevel": "Debug",
