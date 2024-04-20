@@ -1,0 +1,1281 @@
+RUST_LOG=trace probe-rs run --chip STM32F103C8 target/thumbv7m-none-eabi/debug/hello
+DEBUG probe_rs::config::registry: Searching registry for chip with name STM32F103C8
+DEBUG probe_rs::config::registry: Exact match for chip name: STM32F103C8
+ INFO probe_rs::config::target: Using sequence Arm(Stm32Armv7)
+DEBUG list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: Searching for CMSIS-DAP probes using nusb
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_cmsisdap_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools:   Interface 0: HS-Probe CMSIS-DAP v1 Interface
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools:     HID interface found
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools:   Interface 1: HS-probe CMSIS-DAP v2 Interface
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: interface 2 has no string, skipping
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: interface 3 has no string, skipping
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: Rusty Probe with CMSIS-DAP v1/v: CMSIS-DAP device with 4 interfaces
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: Will use interface number 0 for CMSIS-DAPv1
+DEBUG list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: Found 1 CMSIS-DAP probes using nusb, searching HID
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: CMSIS-DAP device with USB path: "DevSrvsID:4294986229"
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools:                 product_string: "Rusty Probe with CMSIS-DAP v1/v2 Support"
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools:                      interface: 0
+TRACE list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: Ignoring duplicate Rusty Probe with CMSIS-DAP v1/v2 Support (VID: 1209, PID: 4853, Serial: dc61cd078f743b33ef4014, CmsisDap)
+DEBUG list_cmsisdap_devices: probe_rs::probe::cmsisdap::tools: Found 1 CMSIS-DAP probes total
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_ftdi_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_stlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_jlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_espjtag_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_wlink_devices: probe_rs::probe::wlink: Searching for WCH-Link(RV) probes
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_wlink_devices: nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG list_wlink_devices: probe_rs::probe::wlink: Found 0 WCH-Link probes total
+TRACE probe_rs::probe::cmsisdap::tools: Attempting to open device matching 1209:4853:dc61cd078f743b33ef4014
+DEBUG nusb::platform::macos_iokit::enumeration: Probing device 4294986219
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `kUSBString`
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `USB Interface Name`
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+DEBUG nusb::platform::macos_iokit::enumeration: Device does not have property `bInterfaceNumber`
+TRACE probe_rs::probe::cmsisdap::tools: Trying device DeviceInfo { bus_number: 0, device_address: 1, vendor_id: 0x1209, product_id: 0x4853, device_version: 0x0010, class: 0x00, subclass: 0x00, protocol: 0x00, speed: Some(Full), manufacturer_string: Some("Probe-rs development team"), product_string: Some("Rusty Probe with CMSIS-DAP v1/v"), serial_number: Some("dc61cd078f743b33ef4014"), location_id: 17825792, registry_entry_id: 4294986219, interfaces: [InterfaceInfo { interface_number: 0, class: 0x03, subclass: 0x00, protocol: 0x00, interface_string: Some("HS-Probe CMSIS-DAP v1 Interface") }, InterfaceInfo { interface_number: 1, class: 0xFF, subclass: 0x00, protocol: 0x00, interface_string: Some("HS-probe CMSIS-DAP v2 Interface") }, InterfaceInfo { interface_number: 2, class: 0x02, subclass: 0x02, protocol: 0x00, interface_string: None }, InterfaceInfo { interface_number: 3, class: 0x0A, subclass: 0x00, protocol: 0x00, interface_string: None }] }
+TRACE probe_rs::probe::cmsisdap::tools:   Interface 0: HS-Probe CMSIS-DAP v1 Interface
+TRACE probe_rs::probe::cmsisdap::tools:     HID interface found
+TRACE probe_rs::probe::cmsisdap::tools:   Interface 1: HS-probe CMSIS-DAP v2 Interface
+TRACE probe_rs::probe::cmsisdap::tools: interface 2 has no string, skipping
+TRACE probe_rs::probe::cmsisdap::tools: interface 3 has no string, skipping
+TRACE probe_rs::probe::cmsisdap::tools: Rusty Probe with CMSIS-DAP v1/v: CMSIS-DAP device with 4 interfaces
+TRACE probe_rs::probe::cmsisdap::tools: Will use interface number 0 for CMSIS-DAPv1
+ INFO nusb::platform::macos_iokit::device: Opening device from registry id 4294986219
+ INFO nusb::platform::macos_iokit::events: starting event loop thread
+DEBUG nusb::platform::macos_iokit::device: Active config from single descriptor is 1
+DEBUG nusb::platform::macos_iokit::device: Found endpoints: {2: EndpointInfo { pipe_ref: 1, direction: 0, number: 2, transfer_type: 2, max_packet_size: 64, interval: 0, max_burst: 64, mult: 0, bytes_per_interval: 0 }, 130: EndpointInfo { pipe_ref: 2, direction: 1, number: 2, transfer_type: 2, max_packet_size: 64, interval: 0, max_burst: 64, mult: 0, bytes_per_interval: 0 }, 131: EndpointInfo { pipe_ref: 3, direction: 1, number: 3, transfer_type: 2, max_packet_size: 64, interval: 0, max_burst: 64, mult: 0, bytes_per_interval: 0 }}
+DEBUG probe_rs::probe::cmsisdap::tools: Opening 1209:4853 in CMSIS-DAPv2 mode
+DEBUG probe_rs::probe::cmsisdap::commands: Draining probe of any pending data.
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE async_io::block_on: polling::kqueue: new kqueue_fd=3
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(930.458µs) kqueue_fd=3 timeout=Some(930.417µs)
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=0 timeout=Some(815µs) kqueue_fd=3 timeout=Some(815µs)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 1 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 1 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::block_on: async_io::driver: completed
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Cancelled all transfers on endpoint 82. status=0
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=e00002eb, len=0
+DEBUG probe_rs::probe::cmsisdap::commands: Attempt 1 to find packet size
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001499660 on endpoint 02
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=None kqueue_fd=3 timeout=None
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001499660, status=0, len=2
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 00, FF]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001499660 on endpoint 82
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(998.433041ms) kqueue_fd=3 timeout=Some(998.432999ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001499660, status=0, len=4
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Receive buffer: [00, 02, 40, 00]...
+DEBUG probe_rs::probe::cmsisdap::commands: Success: packet size is 64
+DEBUG probe_rs::probe::cmsisdap::commands: Configuring probe to use packet size 64
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357a0 on endpoint 02
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.969708ms) kqueue_fd=3 timeout=Some(999.969666ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357a0, status=0, len=2
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 00, FE]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357a0 on endpoint 82
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.9735ms) kqueue_fd=3 timeout=Some(999.973458ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357a0, status=0, len=3
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Receive buffer: [00, 01, 01]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357a0 on endpoint 02
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.977625ms) kqueue_fd=3 timeout=Some(999.977625ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357a0, status=0, len=2
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 00, F0]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357a0 on endpoint 82
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978166ms) kqueue_fd=3 timeout=Some(999.978166ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357a0, status=0, len=3
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Receive buffer: [00, 01, 41]...
+DEBUG probe_rs::probe::cmsisdap: Detected probe capabilities: Capabilities { _swd_implemented: true, _jtag_implemented: false, swo_uart_implemented: false, swo_manchester_implemented: false, _atomic_commands_implemented: false, _test_domain_timer_implemented: false, swo_streaming_trace_implemented: true, _uart_communication_port_implemented: false, uart_com_port_implemented: false }
+DEBUG attach: probe_rs::probe::cmsisdap: Attaching to target system (clock = 1000kHz)
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435860 on endpoint 02
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978625ms) kqueue_fd=3 timeout=Some(999.978625ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 02, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435860 on endpoint 82
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.975375ms) kqueue_fd=3 timeout=Some(999.975334ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Receive buffer: [02, 01]...
+ INFO attach: probe_rs::probe::cmsisdap: Using protocol SWD
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435860 on endpoint 02
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978333ms) kqueue_fd=3 timeout=Some(999.978292ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=5
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 11, 40, 42, 0F, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435860 on endpoint 82
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.97875ms) kqueue_fd=3 timeout=Some(999.97875ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Receive buffer: [11, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435860 on endpoint 02
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978958ms) kqueue_fd=3 timeout=Some(999.978958ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=6
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 04, 00, FF, FF, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435860 on endpoint 82
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978958ms) kqueue_fd=3 timeout=Some(999.978916ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Receive buffer: [04, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435860 on endpoint 02
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978917ms) kqueue_fd=3 timeout=Some(999.978875ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 13, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435860 on endpoint 82
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978708ms) kqueue_fd=3 timeout=Some(999.978666ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Receive buffer: [13, 00]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435860 on endpoint 02
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.979084ms) kqueue_fd=3 timeout=Some(999.979084ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435860, status=0, len=3
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 01, 00, 01]...
+ INFO attach:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x60000149eb40 on endpoint 82
+TRACE attach:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978875ms) kqueue_fd=3 timeout=Some(999.978875ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x60000149eb40, status=0, len=2
+TRACE attach:async_io::block_on: async_io::driver: completed
+TRACE attach: probe_rs::probe::cmsisdap::commands: Receive buffer: [01, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Setting up debug port Default
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x60000149eb40 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.969334ms) kqueue_fd=3 timeout=Some(999.969292ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x60000149eb40, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.961209ms) kqueue_fd=3 timeout=Some(999.961167ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:0111100111100111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.977333ms) kqueue_fd=3 timeout=Some(999.977333ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=4
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 10, 9E, E7]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978542ms) kqueue_fd=3 timeout=Some(999.9785ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980458ms) kqueue_fd=3 timeout=Some(999.980458ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.979875ms) kqueue_fd=3 timeout=Some(999.979875ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980417ms) kqueue_fd=3 timeout=Some(999.980417ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981416ms) kqueue_fd=3 timeout=Some(999.981416ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: SWD: Connecting to debug port with address Default
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980959ms) kqueue_fd=3 timeout=Some(999.980959ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.979833ms) kqueue_fd=3 timeout=Some(999.979792ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980458ms) kqueue_fd=3 timeout=Some(999.980416ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981459ms) kqueue_fd=3 timeout=Some(999.981417ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::probe::cmsisdap: Adding command to batch: Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 items in batch
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Attempting batch of 1 items
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981541ms) kqueue_fd=3 timeout=Some(999.981541ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=4
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 05, 00, 01, 02]...
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980666ms) kqueue_fd=3 timeout=Some(999.980666ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=3
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Receive buffer: [05, 01, 0F]...
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 of batch of 1 items executed
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Protocol error in response to command Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981ms) kqueue_fd=3 timeout=Some(999.981ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.9795ms) kqueue_fd=3 timeout=Some(999.979458ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:0111100111100111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980333ms) kqueue_fd=3 timeout=Some(999.980291ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=4
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 10, 9E, E7]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981042ms) kqueue_fd=3 timeout=Some(999.981042ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981167ms) kqueue_fd=3 timeout=Some(999.981125ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980542ms) kqueue_fd=3 timeout=Some(999.980542ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981458ms) kqueue_fd=3 timeout=Some(999.981416ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981ms) kqueue_fd=3 timeout=Some(999.981ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: SWD: Connecting to debug port with address Default
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981708ms) kqueue_fd=3 timeout=Some(999.981667ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980417ms) kqueue_fd=3 timeout=Some(999.980375ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.98075ms) kqueue_fd=3 timeout=Some(999.98075ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981667ms) kqueue_fd=3 timeout=Some(999.981626ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::probe::cmsisdap: Adding command to batch: Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 items in batch
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Attempting batch of 1 items
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981458ms) kqueue_fd=3 timeout=Some(999.981458ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=4
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 05, 00, 01, 02]...
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981959ms) kqueue_fd=3 timeout=Some(999.981918ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=3
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Receive buffer: [05, 01, 0F]...
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 of batch of 1 items executed
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Protocol error in response to command Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.98075ms) kqueue_fd=3 timeout=Some(999.980709ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981666ms) kqueue_fd=3 timeout=Some(999.981666ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:0111100111100111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980917ms) kqueue_fd=3 timeout=Some(999.980917ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=4
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 10, 9E, E7]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981625ms) kqueue_fd=3 timeout=Some(999.981584ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981084ms) kqueue_fd=3 timeout=Some(999.981042ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980958ms) kqueue_fd=3 timeout=Some(999.980917ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980833ms) kqueue_fd=3 timeout=Some(999.980791ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981625ms) kqueue_fd=3 timeout=Some(999.981625ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: SWD: Connecting to debug port with address Default
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981667ms) kqueue_fd=3 timeout=Some(999.981667ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980916ms) kqueue_fd=3 timeout=Some(999.980916ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435780 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981ms) kqueue_fd=3 timeout=Some(999.980958ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435780 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981333ms) kqueue_fd=3 timeout=Some(999.981291ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435780, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::probe::cmsisdap: Adding command to batch: Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 items in batch
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Attempting batch of 1 items
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981125ms) kqueue_fd=3 timeout=Some(999.981083ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=4
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 05, 00, 01, 02]...
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981458ms) kqueue_fd=3 timeout=Some(999.981458ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=3
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Receive buffer: [05, 01, 0F]...
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 of batch of 1 items executed
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Protocol error in response to command Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980667ms) kqueue_fd=3 timeout=Some(999.980626ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x60000147c480 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.882417ms) kqueue_fd=3 timeout=Some(999.882292ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x60000147c480, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:0111100111100111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.974917ms) kqueue_fd=3 timeout=Some(999.974876ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=4
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 10, 9E, E7]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.979667ms) kqueue_fd=3 timeout=Some(999.979625ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981125ms) kqueue_fd=3 timeout=Some(999.981083ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.982084ms) kqueue_fd=3 timeout=Some(999.982084ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.9815ms) kqueue_fd=3 timeout=Some(999.981458ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981083ms) kqueue_fd=3 timeout=Some(999.981041ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: SWD: Connecting to debug port with address Default
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981542ms) kqueue_fd=3 timeout=Some(999.9815ms)
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=9
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x60000147c480 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=None kqueue_fd=3 timeout=None
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x60000147c480, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435760 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980958ms) kqueue_fd=3 timeout=Some(999.980958ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435760, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435760 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980666ms) kqueue_fd=3 timeout=Some(999.980625ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435760, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::probe::cmsisdap: Adding command to batch: Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 items in batch
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Attempting batch of 1 items
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981875ms) kqueue_fd=3 timeout=Some(999.981833ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=4
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 05, 00, 01, 02]...
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981292ms) kqueue_fd=3 timeout=Some(999.98125ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=3
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Receive buffer: [05, 01, 0F]...
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 of batch of 1 items executed
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Protocol error in response to command Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981084ms) kqueue_fd=3 timeout=Some(999.981084ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981417ms) kqueue_fd=3 timeout=Some(999.981376ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:0111100111100111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981291ms) kqueue_fd=3 timeout=Some(999.98125ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=4
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 10, 9E, E7]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981584ms) kqueue_fd=3 timeout=Some(999.981542ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981792ms) kqueue_fd=3 timeout=Some(999.981792ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981458ms) kqueue_fd=3 timeout=Some(999.981417ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980042ms) kqueue_fd=3 timeout=Some(999.98ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981792ms) kqueue_fd=3 timeout=Some(999.98175ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: SWD: Connecting to debug port with address Default
+DEBUG debug_port_setup: probe_rs::architecture::arm::sequences: Performing SWD line reset
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:111111111111111111111111111111111111111111111111111
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981709ms) kqueue_fd=3 timeout=Some(999.981668ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=9
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 33, FF, FF, FF, FF, FF, FF, 07]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981333ms) kqueue_fd=3 timeout=Some(999.981333ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+TRACE debug_port_setup: probe_rs::probe::cmsisdap: swj sequence:000
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435720 on endpoint 02
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981042ms) kqueue_fd=3 timeout=Some(999.981042ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=3
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 12, 03, 00]...
+ INFO debug_port_setup:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435720 on endpoint 82
+TRACE debug_port_setup:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981917ms) kqueue_fd=3 timeout=Some(999.981917ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435720, status=0, len=2
+TRACE debug_port_setup:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup: probe_rs::probe::cmsisdap::commands: Receive buffer: [12, 00]...
+DEBUG debug_port_setup: probe_rs::probe::cmsisdap: Adding command to batch: Read(port=DebugPort, addr=0)
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 items in batch
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Attempting batch of 1 items
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x6000014357c0 on endpoint 02
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.978875ms) kqueue_fd=3 timeout=Some(999.978875ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=4
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 05, 00, 01, 02]...
+ INFO debug_port_setup:process_batch:async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x6000014357c0 on endpoint 82
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981458ms) kqueue_fd=3 timeout=Some(999.981416ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x6000014357c0, status=0, len=3
+TRACE debug_port_setup:process_batch:async_io::block_on: async_io::driver: completed
+TRACE debug_port_setup:process_batch: probe_rs::probe::cmsisdap::commands: Receive buffer: [05, 01, 0F]...
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: 1 of batch of 1 items executed
+DEBUG debug_port_setup:process_batch: probe_rs::probe::cmsisdap: Protocol error in response to command Read(port=DebugPort, addr=0)
+DEBUG probe_rs::probe::cmsisdap: Detaching from CMSIS-DAP probe
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435760 on endpoint 02
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.980625ms) kqueue_fd=3 timeout=Some(999.980625ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435760, status=0, len=1
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 03]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435760 on endpoint 82
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981917ms) kqueue_fd=3 timeout=Some(999.981875ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435760, status=0, len=2
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Receive buffer: [03, 00]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted OUT transfer 0x600001435760 on endpoint 02
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981792ms) kqueue_fd=3 timeout=Some(999.981792ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435760, status=0, len=3
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Transmit buffer: [00, 01, 00]...
+ INFO async_io::block_on: nusb::platform::macos_iokit::transfer: Submitted IN transfer 0x600001435760 on endpoint 82
+TRACE async_io::block_on: async_io::driver: sleep until notification
+TRACE async_io::main_loop:react:Poller::wait:wait: polling::kqueue: new events kqueue_fd=3 res=1 timeout=Some(999.981667ms) kqueue_fd=3 timeout=Some(999.981626ms)
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop:react: async_io::reactor: 0 ready wakers
+TRACE async_io::main_loop: async_io::driver: sleeping for 50 us
+TRACE async_io::main_loop: async_io::driver: notified
+TRACE async_io::main_loop: async_io::driver: waiting on I/O
+TRACE async_io::main_loop:react:process_timers: async_io::reactor: 0 ready wakers
+ INFO nusb::platform::macos_iokit::transfer: Completion callback for transfer 0x600001435760, status=0, len=2
+TRACE async_io::block_on: async_io::driver: completed
+TRACE probe_rs::probe::cmsisdap::commands: Receive buffer: [01, 00]...
+ INFO nusb::platform::macos_iokit::events: event loop thread exited
+Error: Connecting to the chip was unsuccessful.
+
+Caused by:
+    0: An ARM specific error occurred.
+    1: An ARM specific error occurred.
+    2: Failed to connect to the debug port. Please check the debug cable and target power. If SWD multi-drop is used, ensure the correct TARGETSEL value is used.
